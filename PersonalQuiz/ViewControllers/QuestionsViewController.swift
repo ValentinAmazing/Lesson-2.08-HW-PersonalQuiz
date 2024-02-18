@@ -42,7 +42,7 @@ final class QuestionsViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let resultVC = segue.destination as? ResultViewController
-        resultVC?.answers = answersChosen //передаем массив с ответами
+        resultVC?.answers = answersChosen //передаем массив с ответами на экран результатов
     }
     
     // MARK: - IB Actions

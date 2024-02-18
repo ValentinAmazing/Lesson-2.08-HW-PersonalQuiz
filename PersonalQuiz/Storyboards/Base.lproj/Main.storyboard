@@ -302,16 +302,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="PQD-JN-cre">
-                                <rect key="frame" x="80" y="236" width="160.5" height="96.5"/>
+                                <rect key="frame" x="16" y="236" width="288" height="96.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вы - 🐙" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JTx-V8-Caq">
-                                        <rect key="frame" x="0.0" y="0.0" width="160.5" height="60"/>
+                                        <rect key="frame" x="64" y="0.0" width="160.5" height="60"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вы осьминог" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UP0-OJ-34i">
-                                        <rect key="frame" x="28" y="76" width="104" height="20.5"/>
+                                        <rect key="frame" x="92" y="76" width="104" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -322,8 +322,10 @@
                         <viewLayoutGuide key="safeArea" id="ejH-dv-X4O"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="ejH-dv-X4O" firstAttribute="trailing" secondItem="PQD-JN-cre" secondAttribute="trailing" constant="16" id="9xe-Eu-fUr"/>
                             <constraint firstItem="PQD-JN-cre" firstAttribute="centerX" secondItem="fN4-B1-rfr" secondAttribute="centerX" id="MiA-ge-Rgc"/>
                             <constraint firstItem="PQD-JN-cre" firstAttribute="centerY" secondItem="fN4-B1-rfr" secondAttribute="centerY" id="UQ6-s3-aFP"/>
+                            <constraint firstItem="PQD-JN-cre" firstAttribute="leading" secondItem="ejH-dv-X4O" secondAttribute="leading" constant="16" id="x8x-zJ-sgx"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Результат" id="icl-s8-iGo">
@@ -333,6 +335,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="definitionLabel" destination="UP0-OJ-34i" id="BDT-TY-tiD"/>
+                        <outlet property="youAreLabel" destination="JTx-V8-Caq" id="lbs-V9-XTg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="29p-ct-q3e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
